@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -40,8 +40,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SDL)/include;$(SDL_image)/include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SDL)/lib/x86;$(SDL_image)/lib/x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2-2.0.3/include;\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2_image-2.0.0/include;$(IncludePath)</IncludePath>
+    <LibraryPath>\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2-2.0.3/lib/x86;\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2_image-2.0.0/lib/x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

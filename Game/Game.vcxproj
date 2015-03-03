@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -41,9 +41,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(BOX2D);..\Engine\src;$(SDL_mixer)/include;$(SDL)/include;$(SDL_image)/include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\$(Configuration);$(SDL)/lib/x86;$(SDL_mixer)/lib/x86;$(SDL_image)/lib/x86;$(LibraryPath)</LibraryPath>
-    <SourcePath>$(BOX2D);$(SourcePath)</SourcePath>
+    <IncludePath>..\Engine\src;\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2_mixer-2.0.0/include;\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2-2.0.3/include;\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2_image-2.0.0/include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\$(Configuration);\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2-2.0.3/lib/x86;\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2_mixer-2.0.0/lib/x86;\\algshare\home\My Documents\GitHub\CST8237-Midterm\External\SDL2_image-2.0.0/lib/x86;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -59,7 +59,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;Engine.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

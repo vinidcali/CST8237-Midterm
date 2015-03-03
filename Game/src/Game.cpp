@@ -33,6 +33,11 @@ void Game::InitializeImpl()
 {
   SDL_SetWindowTitle(_window, "Game");
 
+  //setting different speed for each box
+  _firstBox.SetRotationSpeed(10000.0f);
+  _secondBox.SetRotationSpeed(5000.0f);
+  _thirdBox.SetRotationSpeed(2000.0f);
+
   _objects.push_back(&_firstBox);
   _objects.push_back(&_secondBox);
   _objects.push_back(&_thirdBox);
@@ -46,9 +51,17 @@ void Game::InitializeImpl()
   SDL_Point windowSize;
   SDL_GetWindowSize(_window, &windowSize.x, &windowSize.y);
 
-  _firstBox.GetTransform().position = { windowSize.x / 2, windowSize.y / 2, 0 };
-  _secondBox.GetTransform().position = { windowSize.x / 3, windowSize.y / 1, 0 };
-  _thirdBox.GetTransform().position = { windowSize.x / 1, windowSize.y / 3, 0 };
+  _firstBox.GetTransform().position.x = windowSize.x / 2;
+	  _firstBox.GetTransform().position.y = windowSize.y / 2;
+	  _firstBox.GetTransform().position.z = 0;
+
+  _secondBox.GetTransform().position.x = windowSize.x / 3;
+	  _secondBox.GetTransform().position.y = windowSize.y / 1;
+	  _secondBox.GetTransform().position.z = 0;
+
+  _thirdBox.GetTransform().position.x = windowSize.x / 1;
+	  _thirdBox.GetTransform().position.y = windowSize.y / 3;
+	  _thirdBox.GetTransform().position.z = 0;
 }
 
 void Game::UpdateImpl(float dt)
